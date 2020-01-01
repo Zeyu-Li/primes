@@ -12,7 +12,7 @@ function isPrime(number) {
     } else {
         // if less than prime, it is prime, otherwise, 
         // check if it is even, ends in 5 or divisible by 3 it is not prime
-        if (number <= 5) {
+        if (number <= 5 && number != 4) {
             return 'prime';
         } else if (number % 10 % 2 === 0 ||  number % 10 === 5) {
             return 'not prime';
