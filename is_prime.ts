@@ -16,14 +16,14 @@ function isPrime(number) {
             return 'prime';
         } else if (number % 10 % 2 === 0 ||  number % 10 === 5) {
             return 'not prime';
-        } else if (number % 100 % 3 === 0) {
+        } else if (number % 3 === 0) {
             return 'not prime';
         } else {
             // for i starting at 7 and incrementing a 2
             for (let i: number = 7; i >= number ** .5; i+=2) {
                 // if multiple of 3, continue otherwise 
                 // if it is module the index, it is not prime
-                if (i % 100 % 3 === 0) {
+                if (i % 10 % 3 === 0) {
                     continue;
                 } else if (number % i === 0) {
                     return 'not prime';
